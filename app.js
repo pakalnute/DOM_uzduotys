@@ -1,12 +1,30 @@
 // 1.Atskiri elementai
 //     a. Tamsiai žaliai nuspalvinti h1 tagą;
-document.querySelector('h1').style.color = 'darkgreen';
+
+let h1DOM = document.getElementsByTagName('h1')[0];
+h1DOM.style.backgroundColor = "darkgreen";
+
 //     b. Tagui i pridėti klasę small;
-document.querySelector('i').classList.add('small');
+
+let iDOM = document.getElementsByTagName('i')[0];
+iDOM.classList.add('small');
+
 //     c. Iš tago h1 pašalinti klasę main;
-document.querySelector('h1').classList.remove('main');
+
+h1DOM.classList.remove('main');
+
 //     d. Tik tam h2 tagui, kuris iškart eina po h1 tagui pridėti klasę first ir pašalinti klasę main;
+
+let h2DOM = document.querySelector('h1 + h2');
+h2DOM.classList.add('first');
+h2DOM.classList.remove('main');
+
 //     e .Pirmam span tagui, kuris yra h2 viduje sumažinti fonto dydį iki 10px ir nudažyti pilkai
+
+let spanDOM = document.querySelector('h2 > span:first-of-type');
+spanDOM.style.color = 'grey';
+spanDOM.style.fontSize = '10px';
+
 // 2. Elemetų grupės (nodeList) skaičiavimus išvest į consolę
 //     a. Suskaičiuoti kiek yra h2 tagų;
 //     b. Suskaičiuoti kiek yra h2 tagų, kurie neturi klasės first
